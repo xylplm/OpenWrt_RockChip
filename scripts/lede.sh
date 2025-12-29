@@ -28,11 +28,11 @@ rm -rf openwrt-package/luci-app-verysync
 git clone --depth=1 https://github.com/DHDAXCW/dhdaxcw-app
 
 # Add luci-app-ssr-plus
-git clone --depth=1 https://github.com/fw876/helloworld
+#git clone --depth=1 https://github.com/fw876/helloworld
 
 # Add luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2
+#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add OpenClash
@@ -52,16 +52,16 @@ git clone --depth=1 -b 2.13.4 https://github.com/DHDAXCW/luci-app-lucky
 rm -rf ../../customfeeds/packages/net/lucky
 
 # alist
-git clone -b lua --depth=1 https://github.com/sbwml/luci-app-alist
+#git clone -b lua --depth=1 https://github.com/sbwml/luci-app-alist
 
 # Add OpenAppFilter
-git clone --depth=1 https://github.com/destan19/OpenAppFilter
+#git clone --depth=1 https://github.com/destan19/OpenAppFilter
 
 # qbittorrent
-rm -rf ../../customfeeds/packages/net/qBittorrent
-rm -rf ../../customfeeds/packages/libs/rblibtorrent
-git clone --depth=1 https://github.com/sbwml/luci-app-qbittorrent
-rm -rf luci-app-qbittorrent/luci-app-qbittorrent
+#rm -rf ../../customfeeds/packages/net/qBittorrent
+#rm -rf ../../customfeeds/packages/libs/rblibtorrent
+#git clone --depth=1 https://github.com/sbwml/luci-app-qbittorrent
+#rm -rf luci-app-qbittorrent/luci-app-qbittorrent
 
 popd
  
