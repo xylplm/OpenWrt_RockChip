@@ -4,6 +4,10 @@
 ### 源代码地址
 https://github.com/DHDAXCW/lede-rockchip
 
+### 编译设备
+
+项目fork自https://github.com/DHDAXCW/OpenWrt_RockChip，仅保留自用的R2S R3S
+
 ### 支持设备
 ```
 embedfire_doornet1
