@@ -4,6 +4,49 @@
 ### 源代码地址
 https://github.com/DHDAXCW/lede-rockchip
 
+### 同步上游仓库
+
+如需同步主库 [DHDAXCW/OpenWrt_RockChip](https://github.com/DHDAXCW/OpenWrt_RockChip) 的最新代码，可参考以下方式：
+
+#### 方式一：使用命令行合并（推荐）
+
+```bash
+# 添加上游仓库作为远程源
+git remote add upstream https://github.com/DHDAXCW/OpenWrt_RockChip.git
+
+# 获取上游最新代码
+git fetch upstream main
+
+# 合并上游代码到本地（优先使用上游版本解决冲突）
+git merge upstream/main -X theirs --no-edit
+
+# 推送到自己的仓库
+git push origin main
+```
+
+#### 方式二：使用 GitHub 网页界面
+
+1. 进入你的 fork 仓库：https://github.com/xylplm/OpenWrt_RockChip
+2. 点击 **"Sync fork"** 按钮（如果有）
+3. 点击 **"Update branch"** 完成同步
+
+#### 方式三：创建 Pull Request
+
+如果上述方式失败，可以手动创建 PR：
+
+```bash
+# 创建新分支用于同步
+git checkout -b sync-upstream
+
+# 合并上游代码
+git merge upstream/main -X theirs --no-edit
+
+# 推送分支
+git push origin sync-upstream
+
+# 在 GitHub 网页上创建 PR 将 sync-upstream 分支合并到 main
+```
+
 ### 编译设备
 
 项目fork自https://github.com/DHDAXCW/OpenWrt_RockChip，仅保留自用的R2S R3S
