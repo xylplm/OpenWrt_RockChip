@@ -16,15 +16,18 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Sync with upstream
+    - name: Configure Git
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+
+    - name: Fetch upstream repository
+      run: |
         git remote add upstream https://github.com/DHDAXCW/OpenWrt_RockChip.git
         git fetch upstream main
 
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v8
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: 'chore: sync upstream repository'
@@ -36,3 +39,4 @@ jobs:
         branch: sync-upstream
         delete-branch: true
         labels: 'automated,sync'
+        committer: GitHub Action <action@github.com>
